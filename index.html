@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Affordable Web Design for Small Businesses">
-  <title>Deva Design - Affordable Web Design</title>
+  <title>Deva Design - Advanced Web Design</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> <!-- Swiper CSS -->
 </head>
 <body>
-  <!-- Header Section -->
+  <!-- Header -->
   <header>
     <div class="container">
       <h1>Deva Design</h1>
@@ -16,6 +17,7 @@
         <ul>
           <li><a href="#about">About Us</a></li>
           <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#contact">Contact Us</a></li>
           <li><a href="#faqs">FAQs</a></li>
         </ul>
@@ -26,8 +28,8 @@
   <!-- Hero Section -->
   <section id="hero">
     <div class="container">
-      <h2>Affordable Web Design for Small Businesses</h2>
-      <p>Helping you create stunning websites without breaking the bank.</p>
+      <h2>Your Dream Website, Designed for Success</h2>
+      <p>Helping you create stunning, affordable websites for your small business.</p>
       <a href="#contact" class="cta-button">Get a Free Quote</a>
     </div>
   </section>
@@ -36,7 +38,7 @@
   <section id="about">
     <div class="container">
       <h2>About Us</h2>
-      <p>At Deva Design, we specialize in creating affordable websites for small businesses in Durham and Toronto. Our team is dedicated to helping you grow your online presence with professional, modern designs.</p>
+      <p>Deva Design is dedicated to delivering high-quality, affordable websites tailored to the needs of small businesses. Our expert team ensures your online presence reflects your brand's unique identity.</p>
     </div>
   </section>
 
@@ -46,15 +48,30 @@
       <h2>Our Services</h2>
       <div class="service">
         <h3>Custom Websites</h3>
-        <p>Tailored designs to meet your business needs.</p>
+        <p>Tailored designs built to meet your specific needs.</p>
       </div>
       <div class="service">
-        <h3>eCommerce Websites</h3>
-        <p>Fully functional online stores with payment integration.</p>
+        <h3>eCommerce Solutions</h3>
+        <p>Fully functional online stores with payment gateways.</p>
       </div>
       <div class="service">
         <h3>Landing Pages</h3>
-        <p>One-page designs to drive leads and conversions.</p>
+        <p>One-page websites designed to convert visitors into customers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <div class="container">
+      <h2>Our Portfolio</h2>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="https://via.placeholder.com/800x400" alt="Project 1"></div>
+          <div class="swiper-slide"><img src="https://via.placeholder.com/800x400" alt="Project 2"></div>
+          <div class="swiper-slide"><img src="https://via.placeholder.com/800x400" alt="Project 3"></div>
+        </div>
+        <div class="swiper-pagination"></div>
       </div>
     </div>
   </section>
@@ -63,7 +80,7 @@
   <section id="contact">
     <div class="container">
       <h2>Contact Us</h2>
-      <p>Have questions or ready to get started? Reach out to us!</p>
+      <p>We’d love to hear from you! Reach out to us today to start your project.</p>
       <a href="mailto:info@devadesign.com" class="cta-button">Email Us</a>
     </div>
   </section>
@@ -74,18 +91,17 @@
       <h2>FAQs</h2>
       <div class="faq">
         <h3>What is your turnaround time?</h3>
-        <p>Most projects are completed within 2 weeks.</p>
+        <p style="display: none;">Most projects are completed within two weeks.</p>
       </div>
       <div class="faq">
         <h3>Do you offer revisions?</h3>
-        <p>Yes, we include 2 free revision rounds in all packages.</p>
-      </div>
-      <div class="faq">
-        <h3>What payment methods do you accept?</h3>
-        <p>We accept PayPal and major credit/debit cards.</p>
+        <p style="display: none;">Yes, two free revisions are included with every project.</p>
       </div>
     </div>
   </section>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop">↑ Back to Top</button>
 
   <!-- Footer -->
   <footer>
@@ -93,5 +109,9 @@
       <p>&copy; 2025 Deva Design. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- External Scripts -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
