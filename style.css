@@ -34,15 +34,32 @@ button:hover, .cta-button:hover {
 
 /* Hero Section */
 #hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(270deg, #0047AB, #00C6FF);
   color: white;
   text-align: center;
-  padding: 100px 20px;
 }
 
-#hero .hero-content {
-  max-width: 600px;
-  margin: 0 auto;
+#hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+#hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+#hero .cta-button {
+  padding: 15px 30px;
+  font-size: 1rem;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
 }
 
 /* About Section */
@@ -76,8 +93,13 @@ button:hover, .cta-button:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
 .service-card i {
-  font-size: 3rem;
+  font-size: 2rem;
   color: #00C6FF;
 }
 
@@ -90,35 +112,6 @@ button:hover, .cta-button:hover {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
-}
-
-.swiper-slide img {
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Contact Section */
-#contact {
-  padding: 50px 20px;
-  background: #f9f9f9;
-}
-
-form {
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-
-form input, form textarea {
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-form button {
-  align-self: flex-end;
 }
 
 /* Footer */
