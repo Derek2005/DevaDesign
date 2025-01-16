@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Affordable Web Design for Small Businesses">
   <title>Deva Design - Modern Web Design</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -31,7 +32,7 @@
   <section id="about">
     <div class="container">
       <h2>About Us</h2>
-      <p>Deva Design is dedicated to providing affordable and modern websites to help small businesses stand out.</p>
+      <p>Deva Design is dedicated to providing affordable and modern websites to help small businesses stand out. Our team is passionate about crafting unique online experiences tailored to your needs.</p>
     </div>
   </section>
 
@@ -39,17 +40,19 @@
   <section id="services">
     <div class="container">
       <h2>Our Services</h2>
-      <div class="service-card">
-        <h3>Custom Websites</h3>
-        <p>We create unique designs tailored to your brand.</p>
-      </div>
-      <div class="service-card">
-        <h3>eCommerce</h3>
-        <p>Build online stores with payment gateways.</p>
-      </div>
-      <div class="service-card">
-        <h3>Landing Pages</h3>
-        <p>Convert visitors into customers with optimized designs.</p>
+      <div class="service-grid">
+        <div class="service-card">
+          <h3>Custom Websites</h3>
+          <p>We create unique designs tailored to your brand.</p>
+        </div>
+        <div class="service-card">
+          <h3>eCommerce</h3>
+          <p>Build online stores with payment gateways.</p>
+        </div>
+        <div class="service-card">
+          <h3>Landing Pages</h3>
+          <p>Convert visitors into customers with optimized designs.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -65,6 +68,8 @@
           <div class="swiper-slide"><img src="https://via.placeholder.com/800x400" alt="Project 3"></div>
         </div>
         <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
     </div>
   </section>
@@ -74,9 +79,9 @@
     <div class="container">
       <h2>Contact Us</h2>
       <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
         <button type="submit">Send Message</button>
       </form>
     </div>
