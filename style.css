@@ -1,77 +1,63 @@
 /* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
+  color: #333;
   line-height: 1.6;
 }
 
-h1, h2, h3 {
-  color: #0047AB;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
 header {
-  background: #0047AB;
+  background-color: #0047AB;
   color: white;
-  padding: 20px 0;
   text-align: center;
+  padding: 20px 0;
 }
 
-header ul {
+header nav ul {
   list-style: none;
   padding: 0;
 }
 
-header ul li {
-  display: inline;
+header nav ul li {
+  display: inline-block;
   margin: 0 10px;
 }
 
-header ul li a {
+header nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
 #hero {
-  background: linear-gradient(to right, #0047AB, #00C6FF);
+  background: linear-gradient(270deg, #0047AB, #00C6FF);
   color: white;
   text-align: center;
-  padding: 50px 20px;
+  padding: 80px 20px;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .cta-button {
-  display: inline-block;
   background: #00C6FF;
   color: white;
   padding: 10px 20px;
-  text-decoration: none;
+  border: none;
   border-radius: 5px;
-  margin-top: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .cta-button:hover {
-  background: #0047AB;
+  transform: scale(1.1);
+  background-color: #003580;
 }
 
-section {
-  margin: 50px 0;
-  padding: 20px;
-}
-
-.service {
-  margin-bottom: 20px;
-}
-
-.faq {
-  margin-bottom: 20px;
+.swiper-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 footer {
