@@ -12,7 +12,7 @@
 <body>
   <!-- Header -->
   <header id="hero">
-    <nav>
+    <nav class="navbar">
       <div class="logo">Deva Design</div>
       <ul class="nav-links">
         <li><a href="#about">About Us</a></li>
@@ -20,11 +20,12 @@
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <button class="cta-button">Get Started</button>
     </nav>
     <div class="hero-content">
       <h1>Modern, Affordable Websites</h1>
       <p>We design websites that help small businesses stand out.</p>
-      <a href="#contact" class="cta-button">Get Started</a>
+      <a href="#contact" class="cta-button">Learn More</a>
     </div>
   </header>
 
@@ -68,8 +69,6 @@
           <div class="swiper-slide"><img src="https://via.placeholder.com/800x400" alt="Project 3"></div>
         </div>
         <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
       </div>
     </div>
   </section>
@@ -96,6 +95,14 @@
 
   <!-- External Scripts -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="script.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
 </body>
 </html>
