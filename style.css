@@ -1,11 +1,10 @@
 /* General Styles */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   color: #333;
   background: white;
-  transition: background 0.3s ease, color 0.3s ease; /* Smooth transition for dark mode */
 }
 
 .container {
@@ -48,24 +47,20 @@ a:hover {
 }
 
 .nav-links li a {
+  text-decoration: none;
   color: white;
   font-size: 1rem;
+  transition: color 0.3s ease;
 }
 
-.cta-button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 20px;
-  background: #00C6FF;
+.nav-links li a:hover {
+  color: #00C6FF;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
   color: white;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.cta-button:hover {
-  background: #0047AB;
-  transform: scale(1.05);
 }
 
 /* Hero Section */
@@ -78,14 +73,11 @@ a:hover {
   background: linear-gradient(270deg, #0047AB, #00C6FF);
   color: white;
   text-align: center;
-}
-
-.hero-content {
-  animation: fadeIn 1.5s ease-in-out;
+  padding: 20px;
 }
 
 .hero-content h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
@@ -96,33 +88,64 @@ a:hover {
 
 .hero-content .cta-button {
   padding: 15px 30px;
-  border-radius: 50px;
+  font-size: 1rem;
+  background: #0047AB;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .hero-content .cta-button:hover {
+  background: #002E67;
   transform: translateY(-5px);
 }
 
-/* Sections */
-section {
+/* About Us Section */
+#about {
+  padding: 50px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 2rem;
+  color: #0047AB;
+}
+
+#about p {
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Services Section */
+#services {
   padding: 50px 20px;
 }
 
-#about {
-  background: #f9f9f9;
+#services h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #0047AB;
 }
 
-#services .service-grid {
+.service-grid {
   display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
 .service-card {
   flex: 1;
+  max-width: 300px;
   background: white;
   padding: 20px;
-  text-align: center;
   border-radius: 10px;
+  text-align: center;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -137,10 +160,22 @@ section {
   color: #0047AB;
 }
 
-/* Portfolio */
+/* Portfolio Section */
+#portfolio {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#portfolio h2 {
+  font-size: 2rem;
+  color: #0047AB;
+}
+
 #portfolio img {
   width: 100%;
+  max-width: 300px;
   border-radius: 10px;
+  margin: 10px;
   transition: transform 0.3s ease;
 }
 
@@ -148,25 +183,41 @@ section {
   transform: scale(1.05);
 }
 
-/* Contact Form */
-form input, form textarea, form button {
+/* Contact Section */
+#contact {
+  padding: 50px 20px;
+  background: #0047AB;
+  color: white;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2rem;
+}
+
+#contact form input, #contact form textarea, #contact form button {
   width: 100%;
-  margin-bottom: 20px;
+  max-width: 500px;
+  margin: 10px auto;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: none;
   border-radius: 5px;
 }
 
-form button {
+#contact form input, #contact form textarea {
+  background: #fff;
+  color: #333;
+}
+
+#contact form button {
   background: #00C6FF;
   color: white;
   cursor: pointer;
-  border: none;
   transition: background 0.3s ease;
 }
 
-form button:hover {
-  background: #0047AB;
+#contact form button:hover {
+  background: #002E67;
 }
 
 /* Footer */
@@ -177,43 +228,18 @@ footer {
   padding: 20px 0;
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-grid {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .service-card {
+    max-width: 90%;
   }
-}
 
-/* Page Transition */
-body {
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
-}
-
-body.fade-out {
-  opacity: 0;
-}
-
-/* Dark Mode */
-body.dark {
-  background: #121212;
-  color: white;
-}
-
-body.dark .navbar {
-  background: rgba(0, 0, 0, 0.9);
-}
-
-body.dark .cta-button {
-  background: #333;
-  color: white;
-}
-
-body.dark a {
-  color: #00C6FF;
+  #portfolio img {
+    max-width: 90%;
+  }
 }
