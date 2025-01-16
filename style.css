@@ -4,7 +4,8 @@ body {
   margin: 0;
   padding: 0;
   color: #333;
-  line-height: 1.6;
+  background: white;
+  transition: background 0.3s ease, color 0.3s ease; /* Smooth transition for dark mode */
 }
 
 .container {
@@ -13,15 +14,29 @@ body {
   padding: 0 20px;
 }
 
+h1, h2, h3 {
+  margin: 20px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #0047AB;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #00C6FF;
+}
+
 /* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background: transparent;
-  position: absolute;
-  width: 100%;
+  background: rgba(0, 71, 171, 0.9);
+  position: sticky;
   top: 0;
   z-index: 10;
 }
@@ -33,14 +48,8 @@ body {
 }
 
 .nav-links li a {
-  text-decoration: none;
   color: white;
   font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-  color: #00C6FF;
 }
 
 .cta-button {
@@ -51,11 +60,12 @@ body {
   background: #00C6FF;
   color: white;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .cta-button:hover {
   background: #0047AB;
+  transform: scale(1.05);
 }
 
 /* Hero Section */
@@ -71,13 +81,12 @@ body {
 }
 
 .hero-content {
-  margin-top: 50px;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 .hero-content h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  animation: fadeIn 1.5s ease-in-out;
 }
 
 .hero-content p {
@@ -87,27 +96,23 @@ body {
 
 .hero-content .cta-button {
   padding: 15px 30px;
-  font-size: 1rem;
   border-radius: 50px;
-  transition: all 0.3s ease;
 }
 
 .hero-content .cta-button:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
 }
 
-/* About Section */
+/* Sections */
+section {
+  padding: 50px 20px;
+}
+
 #about {
-  padding: 50px 20px;
-}
-
-/* Services Section */
-#services {
-  padding: 50px 20px;
   background: #f9f9f9;
 }
 
-.service-grid {
+#services .service-grid {
   display: flex;
   gap: 20px;
 }
@@ -119,6 +124,7 @@ body {
   text-align: center;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
@@ -131,18 +137,35 @@ body {
   color: #0047AB;
 }
 
-/* Portfolio Section */
-#portfolio {
-  padding: 50px 20px;
-}
-
-.swiper-container {
+/* Portfolio */
+#portfolio img {
   width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
 }
 
-.swiper-pagination-bullet-active {
+#portfolio img:hover {
+  transform: scale(1.05);
+}
+
+/* Contact Form */
+form input, form textarea, form button {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form button {
+  background: #00C6FF;
+  color: white;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
   background: #0047AB;
 }
 
@@ -152,4 +175,45 @@ footer {
   color: white;
   text-align: center;
   padding: 20px 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Page Transition */
+body {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+body.fade-out {
+  opacity: 0;
+}
+
+/* Dark Mode */
+body.dark {
+  background: #121212;
+  color: white;
+}
+
+body.dark .navbar {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+body.dark .cta-button {
+  background: #333;
+  color: white;
+}
+
+body.dark a {
+  color: #00C6FF;
 }
