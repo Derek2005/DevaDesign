@@ -3,25 +3,13 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  color: #333;
-  background: white;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-h1, h2, h3 {
-  margin: 20px 0;
-  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(270deg, #0047AB, #00C6FF);
+  color: white;
 }
 
 a {
   text-decoration: none;
-  color: #0047AB;
-  transition: color 0.3s ease;
+  color: white;
 }
 
 a:hover {
@@ -47,20 +35,13 @@ a:hover {
 }
 
 .nav-links li a {
-  text-decoration: none;
-  color: white;
   font-size: 1rem;
   transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-  color: #00C6FF;
 }
 
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: white;
 }
 
 /* Hero Section */
@@ -70,10 +51,7 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(270deg, #0047AB, #00C6FF);
-  color: white;
   text-align: center;
-  padding: 20px;
 }
 
 .hero-content h1 {
@@ -90,7 +68,6 @@ a:hover {
   padding: 15px 30px;
   font-size: 1rem;
   background: #0047AB;
-  color: white;
   border: none;
   border-radius: 5px;
   text-transform: uppercase;
@@ -102,144 +79,19 @@ a:hover {
   transform: translateY(-5px);
 }
 
-/* About Us Section */
-#about {
-  padding: 50px 20px;
-  background: #f9f9f9;
-  text-align: center;
-}
-
-#about h2 {
-  font-size: 2rem;
-  color: #0047AB;
-}
-
-#about p {
-  font-size: 1rem;
-  line-height: 1.8;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Services Section */
-#services {
-  padding: 50px 20px;
-}
-
-#services h2 {
-  font-size: 2rem;
-  text-align: center;
-  color: #0047AB;
-}
-
-.service-grid {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.service-card {
-  flex: 1;
-  max-width: 300px;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.service-card h3 {
-  margin-bottom: 10px;
-  color: #0047AB;
-}
-
-/* Portfolio Section */
-#portfolio {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-#portfolio h2 {
-  font-size: 2rem;
-  color: #0047AB;
-}
-
-#portfolio img {
+/* 3D Box Section */
+#threejs-container {
   width: 100%;
-  max-width: 300px;
-  border-radius: 10px;
-  margin: 10px;
-  transition: transform 0.3s ease;
-}
-
-#portfolio img:hover {
-  transform: scale(1.05);
-}
-
-/* Contact Section */
-#contact {
-  padding: 50px 20px;
-  background: #0047AB;
-  color: white;
-  text-align: center;
-}
-
-#contact h2 {
-  font-size: 2rem;
-}
-
-#contact form input, #contact form textarea, #contact form button {
-  width: 100%;
-  max-width: 500px;
-  margin: 10px auto;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-}
-
-#contact form input, #contact form textarea {
-  background: #fff;
-  color: #333;
-}
-
-#contact form button {
-  background: #00C6FF;
-  color: white;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-#contact form button:hover {
-  background: #002E67;
+  height: 500px;
+  background: #ffffff;
+  overflow: hidden;
+  margin: 20px 0;
 }
 
 /* Footer */
 footer {
-  background: #333;
-  color: white;
   text-align: center;
   padding: 20px 0;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .service-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .service-card {
-    max-width: 90%;
-  }
-
-  #portfolio img {
-    max-width: 90%;
-  }
+  background: #333;
+  color: white;
 }
